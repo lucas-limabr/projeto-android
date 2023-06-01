@@ -1,0 +1,189 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Idroid';
+    src: url(/fontes/idroid.otf) format('truetype');
+}
+
+/*raiz do documento: criação de variáveis globais*/
+:root{
+    --cor1: #53FB96;
+    --cor2: #05c7535b;
+    --cor3: #53fb968f;
+    --cor4: #287A49;
+    --cor5: #047A33;
+    --cor6: #53fb9663;
+    --cor7: #05C753;
+    --cor8: #046c2d;
+    --fonte: 'Idroid';
+}
+
+body{
+    font-family: sans-serif;
+    background-color: var(--cor1);
+}
+
+h1, h2, h3{
+    font-family: var(--fonte);
+}
+
+/*início do cabeçalho*/
+header{
+    background-image: linear-gradient(to bottom, #07ce56, #046c2d);
+}
+
+/*estilizando apenas o parágrafo que está contido em header E qualquer tag h1 no documento HTML*/
+header > p, h1{
+    text-align: center;
+    padding: 0px 8px;
+    color: white; 
+    padding-top: 35px;
+}
+
+header > p{
+    margin: auto;
+    max-width: 530px;
+}
+
+header nav{
+    padding: 30px 0px 20px 15px;
+    
+}
+
+/*toda seletor a que está dentro de nav E que este nav esteja dentro de header*/
+header nav a{
+    color: white;
+    text-decoration: none;
+    padding: 0px 8px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+header nav a:hover{
+    background-color: var(--cor1);
+    border-radius: 8px;
+    padding: 10px;
+    color: var(--cor8);
+    transition: 300ms;
+}
+/*fim do cabeçalho*/
+
+/*início da tag main*/
+main{
+    width: 75%;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 0px 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.514);
+    border-radius: 0px 0px 10px 10px;
+}
+
+main h2{
+    color: var(--cor4);
+    padding: 20px 0px;
+}
+
+main p{
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.7em;
+}
+
+main h3{
+    color: var(--cor4);
+    background-image: linear-gradient(to right, #a9f8c9, #fff);
+    margin: 15px 0px;
+    text-indent: 10px;
+}
+
+main p span{
+    color: var(--cor5);
+    font-weight: bold;
+}
+
+main p a{
+    text-decoration: none;
+}
+
+main p a:visited{
+    color: var(--cor5);
+}
+
+main img{
+    padding: 15px 0px;
+}
+
+/*centralizando a imagem, para isso, eu a transformo em caixa (block)*/
+#img-bugdroid{
+    display: block;
+    margin: auto;
+}
+
+/*colocando margem negativa para o preencher os espaços nas laterais, e não para distanciar*/
+main section#secao-2{
+    padding: 10px 0px;
+    margin: 0px -30px;
+    text-align: center;
+    background-color: #046c2d;
+}
+
+section#secao-2 iframe{
+  border-radius: 7px;
+}
+
+main #secao-3{
+    background-color: var(--cor6);
+    border-radius: 15px;
+}
+
+main h4{
+    padding: 10px 5px;
+    color: white;
+    border-radius: 15px 15px 0px 0px;
+    background-color: var(--cor7);
+}
+
+section#secao-3{
+    margin-top: 10px;
+}
+
+#sub-secao-3{
+    padding: 15px 10px;
+}
+
+#sub-secao-3 > ul{
+   list-style-position: inside;
+   columns: 2;
+   /*alterando o ícone da lista, colocando o código dele, achado no emojipedia. 00A0 é o código da tecla espaço*/
+   list-style-type: '\2714\00A0\00A0';
+}
+
+/*utilizando pseud-elemento*/
+a.link-externo::after{
+    content: '\00A0\1F517';
+}
+
+p#ultimo-paragrafo{
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+footer{
+    margin-top: 18px;
+    background-color: var(--cor8);
+    text-align: center;
+    padding: 8px;
+    color: white;
+}
+
+footer span a:visited{
+    color: var(--cor1);
+}
+
+footer span a{
+    text-decoration: none;
+}

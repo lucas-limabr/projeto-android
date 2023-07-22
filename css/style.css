@@ -53,7 +53,7 @@ header nav{
     
 }
 
-/*toda seletor a que está dentro de nav E que este nav esteja dentro de header*/
+/*todo seletor a que está dentro de nav E que este nav esteja dentro de header*/
 header nav a{
     color: white;
     text-decoration: none;
